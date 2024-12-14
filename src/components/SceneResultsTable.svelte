@@ -34,7 +34,10 @@
 {#if $sceneEntries != undefined}
     {#each bgTempPatterns as bgTemp}
         <h3 class="mb-4 mt-6 text-2xl">背面温度{bgTemp}</h3>
-        <table class="table-auto border-collapse border border-black">
+        <table class="w-full table-auto table-fixed border-collapse border border-black">
+            <colgroup>
+                <col style="width: 60px;" />
+            </colgroup>
             <thead>
                 <tr class="border-collapse border border-black">
                     <td class="border-collapse border border-black"></td>

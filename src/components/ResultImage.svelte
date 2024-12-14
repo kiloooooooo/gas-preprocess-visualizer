@@ -35,11 +35,13 @@
     })();
 </script>
 
-{#if directory}
-    <div class="p-1">
+<div class="p-1">
+    {#if directory}
         <!-- svelte-ignore a11y_img_redundant_alt -->
         <img class="border border-black" src={imageFileUrl} alt="processed image" />
-    </div>
-{:else}
-    <div style="width: 320px; height: 240px; background-color: red;"></div>
-{/if}
+    {:else}
+        <div class="flex items-center justify-center">
+            <span>N/A</span>
+        </div>
+    {/if}
+</div>
