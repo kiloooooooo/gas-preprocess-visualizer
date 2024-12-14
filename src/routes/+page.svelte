@@ -1,4 +1,5 @@
 <script lang="ts">
+    import ConfigSelector from '../components/ConfigSelector.svelte';
     import DirectoryPicker from '../components/DirectoryPicker.svelte';
     import SceneResultsTable from '../components/SceneResultsTable.svelte';
 </script>
@@ -15,8 +16,12 @@
 
     <h2 class="mb-4 mt-8 text-3xl">表示対象の選択</h2>
     <p>表示対象を選択します．処理に用いた画像数を指定します．</p>
-    <span>TODO: 実装</span>
+    <div class="mt-4">
+        <ConfigSelector />
+    </div>
 
     <h2 class="mb-4 mt-8 text-3xl">結果一覧</h2>
-    <SceneResultsTable />
+    <div class="mt-4">
+        <SceneResultsTable />
+    </div>
 </div>

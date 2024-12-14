@@ -1,3 +1,3 @@
-import { sceneEntries } from "./stores";
+import { sceneEntries, imageType, type ImageType } from "./stores";
 
-export { sceneEntries };
+export { sceneEntries, imageType, type ImageType };

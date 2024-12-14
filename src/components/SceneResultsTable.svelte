@@ -53,7 +53,6 @@
                                     directory={scenesParamMap.get(
                                         new SceneParams(distance, bgTemp, flow).encodeString()
                                     )}
-                                    kind="amp"
                                 />
                             </td>
                         {/each}
