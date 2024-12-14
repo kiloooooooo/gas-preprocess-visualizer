@@ -20,7 +20,7 @@
         ...new Set(
             scenesParamMap?.keys().map((sceneParams) => SceneParams.decodeString(sceneParams).flow)
         )
-    ];
+    ].toSorted();
     // 撮影距離のパターンを抽出
     $: distancePatterns = [
         ...new Set(
