@@ -23,12 +23,12 @@ export class SceneParams {
         let bgTemp = '(不明)';
         let flow = '(噴射なし)';
 
-        const regex = /([0-9.]+)(℃|L|m)/g;
+        const regex = /([0-9.]+)(℃|L|m|Ｌ|ｍ)/g;
 
         let match;
         while ((match = regex.exec(dirName)) !== null) {
             const value = parseFloat(match[1]);
-            const unit = match[2];
+            const unit = this.convertFull2Half(match[2]);
 
             switch (unit) {
                 case '℃':
@@ -44,5 +44,16 @@ export class SceneParams {
         }
 
         return new SceneParams(distance, bgTemp, flow);
+    }
+
+    private static convertFull2Half(fullWidthUnit: string): string {
+        switch (fullWidthUnit) {
+            case 'Ｌ':
+                return 'L';
+            case 'ｍ':
+                return 'm';
+            default:
+                return fullWidthUnit;
+        }
     }
 }
